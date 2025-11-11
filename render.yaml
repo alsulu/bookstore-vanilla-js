@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: bookstore-cart
+    env: node
+    region: frankfurt
+    plan: free
+    startCommand: "npm start"

@@ -1,6 +1,9 @@
+const API = import.meta.env.VITE_API_URL || "http://localhost:1111";
+
 const getData = (url) => 
-    fetch('https://marbled-honey-orchestra.glitch.me/' + url)
+    fetch(API + url)
         .then((response) => {
+            //console.log(response);
             if (response.ok)
                 return response.json();
             else {
@@ -12,7 +15,7 @@ const getData = (url) =>
         })
 
 const postData = (url, params={}) => 
-    fetch('https://marbled-honey-orchestra.glitch.me/' + url, {
+    fetch(API + url, {
         method: 'POST',
         body: JSON.stringify(params),
         headers: {
@@ -20,6 +23,7 @@ const postData = (url, params={}) =>
         }
     })
         .then((response) => {
+            //console.log(response);
             if (response.ok)
                 return response.json();
             else {
@@ -31,7 +35,7 @@ const postData = (url, params={}) =>
         })
 
 const putData = (url, params={}) => 
-    fetch('https://marbled-honey-orchestra.glitch.me/' + url, {
+    fetch(API + url, {
         method: 'PUT',
         body: JSON.stringify(params),
         headers: {
@@ -39,6 +43,7 @@ const putData = (url, params={}) =>
         }
     })
         .then((response) => {
+            //console.log(response);
             if (response.ok)
                 return response.json();
             else {
@@ -51,7 +56,7 @@ const putData = (url, params={}) =>
 
 
 const deleteData = (url, params={}) => 
-    fetch('https://marbled-honey-orchestra.glitch.me/' + url, {
+    fetch(API + url, {
         method: 'DELETE',
         body: JSON.stringify(params),
         headers: {
@@ -59,6 +64,7 @@ const deleteData = (url, params={}) =>
         }
     })
         .then((response) => {
+            //console.log(response);
             if (response.ok)
                 return response.json();
             else {

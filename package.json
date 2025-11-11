@@ -1,18 +1,21 @@
 {
   "scripts": {
-    "start": "vite",
+    "start": "node server.js",
     "build": "cross-env BUILD-TYPE=dev vite build",
+    "dev": "concurrently \"npm run server\" \"vite\"",
     "serve": "vite preview --port 3000",
     "server": "json-server --port 1111 ./db.json",
     "test": "echo \"Error: no test specified\" && exit 1",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
+  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@vitejs/plugin-legacy": "^1.8.2",
+    "concurrently": "^9.2.1",
     "cross-env": "^7.0.3",
     "gh-pages": "^6.0.0",
     "sass": "^1.52.1",

@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite';
-import { ViteAliases } from 'vite-aliases';
 import legacy from '@vitejs/plugin-legacy';
-import TemplateLoader from './plugins/vite-template-plugin';
+import TemplateLoader from './plugins/vite-template-plugin.js';
 
 export default defineConfig({
     build: {
@@ -14,7 +13,6 @@ export default defineConfig({
         hmr: true,
     },
     plugins: [
-        ViteAliases(),
         TemplateLoader(),
         legacy({
             targets: ['defaults', 'not IE 11'],
