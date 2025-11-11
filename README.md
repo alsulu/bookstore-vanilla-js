@@ -1,19 +1,9 @@
-# Сайт книжного онлайн-магазина ([https://bookshop-vanillajs.netlify.app/](https://bookshop-vanillajs.netlify.app/))
-
-Проект в процессе разработки
+# Книжный онлайн-магазин ([https://bookstore-vanilla-js.netlify.app](https://bookstore-vanilla-js.netlify.app))
 
 ## Чтобы запустить проект:
 ```
 npm install
-npm install -g json-server
-```
-### Запуск локального сервера:
-```
-npm run server
-```
-### Запуск приложения:
-```
-npm run start
+npm run dev
 ```
 
 Затем откройте [http://localhost:3000](http://localhost:3000) в браузере.
